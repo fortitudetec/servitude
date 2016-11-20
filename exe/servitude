@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'servitude/cli'
+
+cli = Servitude::Cli.new
+cli.run
