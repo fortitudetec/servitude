@@ -1,8 +1,10 @@
 # Servitude
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/servitude`. To experiment with that code, run `bin/console` for an interactive prompt.
+One challenge in the microservice world is tracking service relationships as an application grows.  
 
-TODO: Delete this and the text above, and describe your gem
+Enter Servitude!
+
+Servitude is a simple tool that generates a relationship map or diagram of the microservice components that make up an application based on a simple set of description files.
 
 ## Installation
 
@@ -22,7 +24,41 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### CLI
+
+Run `servitude`
+
+### Service description
+
+In order to define a service you need a yaml file created with the following structure:
+
+```ruby
+name: first-service
+description: This is our first service
+language: Java
+datastores:
+  - Postgres
+messageTypesProduced:
+  - HelloThere
+  - Status
+messageTypesConsumed:
+  - ByeBye
+  - DoIt
+restDependencies:
+  - second-service
+  - third-service
+```
+
+| Field                | Description                                                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| name                 | The name of the current service (REQUIRED)                                                                         |
+| description          | A short description of the purpose of the service                                                                  |
+| language             | The programming language that the service is written in                                                            |
+| datastores           | An array of any datastores that the service uses                                                                   |
+| messageTypesProduced | If the service utilizes asyncronous messaging, an array of message types that the service produces for the system  |
+| messageTypesConsumed | If the service utilizes asyncronous messaging, an array of message types that the service consumes from the system |
+| restDependencies     | An array of other services that this service communicates over REST                                                |
+
 
 ## Development
 
@@ -32,7 +68,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/servitude. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/fortitudetec/servitude. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
