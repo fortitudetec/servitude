@@ -19,7 +19,7 @@ module Servitude
         # run Directory loader
         service_definitions = Servitude::DirectoryLoader.load(directory: '.servitude', verbose: options[:verbose])
       ensure
-        FileUtils.rm_r('.servitude')
+        FileUtils.rm_rf('.servitude')
       end
 
       service_definitions
