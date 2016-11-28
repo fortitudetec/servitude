@@ -1,11 +1,12 @@
 require 'servitude/version'
+require 'servitude/definition_loader'
 require 'optparse'
 
 module Servitude
   class Cli
     def run
       options = parse_options
-      defs = load_defs(options)
+      load_defs(options)
     end
 
     private
@@ -22,6 +23,7 @@ module Servitude
 
         opts.on('-g REPOSITORIES',
                 '--group-of-repositories=REPOSITORIES',
+                Array,
                 'Locate definition files across many git repositories (SERVITUDE files)') do |g|
           options[:group] = g
           options[:location_type] = :group
@@ -51,7 +53,7 @@ module Servitude
     end
 
     def load_defs(options)
-      puts options.inspect
+      DefinitionLoader.load(options)
     end
   end
 end
