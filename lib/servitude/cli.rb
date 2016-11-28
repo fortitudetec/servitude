@@ -1,12 +1,16 @@
 require 'servitude/version'
 require 'servitude/definition_loader'
+require 'servitude/drawers/graphviz_drawer'
 require 'optparse'
 
 module Servitude
   class Cli
     def run
       options = parse_options
-      load_defs(options)
+      defs = load_defs(options)
+
+      # TODO: Probably want to allow for different rendering engines
+      GraphvizDrawer.draw(defs, options[:output])
     end
 
     private
