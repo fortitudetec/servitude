@@ -15,6 +15,8 @@ module Servitude
       service_definitions = TYPES[options[:location_type]].load(options)
 
       puts "Loaded service definitions: #{service_definitions.inspect}" if options[:verbose]
+
+      service_definitions
     end
   end
 end
