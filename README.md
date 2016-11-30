@@ -26,7 +26,17 @@ Or install it yourself as:
 
 ### CLI
 
-Run `sprawl`
+```bash
+Usage: sprawl [options]
+    -d, --directory=DIRECTORY        Locate definition files in given directory
+    -gREPOSITORIES,                  Locate definition files across many git repositories (SERVITUDE files)
+        --group-of-repositories
+    -h, --help                       Prints this help
+    -o, --output-type=OUTPUTTYPE     Format of output (SVG, PNG, Text, HTML)
+    -sREPOSITORY,                    Locate all definition files in a single git repository
+        --single-repository
+    -v, --[no-]verbose               Runs verbosely
+```
 
 ### Service description
 
