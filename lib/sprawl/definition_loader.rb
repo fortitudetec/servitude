@@ -1,8 +1,8 @@
-require 'servitude/loaders/directory_loader'
-require 'servitude/loaders/single_git_loader'
-require 'servitude/loaders/multi_git_loader'
+require 'sprawl/loaders/directory_loader'
+require 'sprawl/loaders/single_git_loader'
+require 'sprawl/loaders/multi_git_loader'
 
-module Servitude
+module Sprawl
   class DefinitionLoader
     TYPES = {
       directory: DirectoryLoader,

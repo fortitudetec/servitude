@@ -1,6 +1,6 @@
 require 'ruby-graphviz'
 
-module Servitude
+module Sprawl
   class GraphvizDrawer
     def self.draw(defs, output)
       graph = ::GraphViz.new(:G, type: :digraph)

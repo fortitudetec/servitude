@@ -1,4 +1,4 @@
-module Servitude
+module Sprawl
   class ServiceDefinition
     attr_accessor :name,
                   :description,

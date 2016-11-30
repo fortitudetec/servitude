@@ -1,9 +1,9 @@
-require 'servitude/version'
-require 'servitude/definition_loader'
-require 'servitude/drawers/graphviz_drawer'
+require 'sprawl/version'
+require 'sprawl/definition_loader'
+require 'sprawl/drawers/graphviz_drawer'
 require 'optparse'
 
-module Servitude
+module Sprawl
   class Cli
     def run
       options = parse_options
@@ -18,7 +18,7 @@ module Servitude
     def parse_options
       options = {}
       OptionParser.new do |opts|
-        opts.banner = 'Usage: servitude [options]'
+        opts.banner = 'Usage: sprawl [options]'
 
         opts.on('-d DIRECTORY', '--directory=DIRECTORY', 'Locate definition files in given directory') do |d|
           options[:directory] = d

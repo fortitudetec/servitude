@@ -1,7 +1,7 @@
 require 'yaml'
-require 'servitude/service_definition'
+require 'sprawl/service_definition'
 
-module Servitude
+module Sprawl
   class DirectoryLoader
     def self.load(options)
       puts 'Using Directory Loader' if options[:verbose]
@@ -13,7 +13,7 @@ module Servitude
 
         puts "Loading definition #{f}" if options[:verbose]
         begin
-          service_definitions << Servitude::ServiceDefinition.from(YAML.load_file(File.join(options[:directory], f)))
+          service_definitions << Sprawl::ServiceDefinition.from(YAML.load_file(File.join(options[:directory], f)))
         rescue
           puts "Failed to load #{f}.  Trying the rest."
         end

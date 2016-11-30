@@ -1,17 +1,17 @@
-# Servitude
+# Sprawl
 
 One challenge in the microservice world is tracking service relationships as an application grows.  
 
-Enter Servitude!
+Enter Sprawl!
 
-Servitude is a simple tool that generates a relationship map or diagram of the microservice components that make up an application based on a simple set of description files.
+Sprawl is a simple tool that generates a relationship map or diagram of the microservice components that make up an application based on a simple set of description files.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'servitude'
+gem 'sprawl'
 ```
 
 And then execute:
@@ -20,13 +20,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install servitude
+    $ gem install sprawl
 
 ## Usage
 
 ### CLI
 
-Run `servitude`
+Run `sprawl`
 
 ### Service description
 
@@ -68,10 +68,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/fortitudetec/servitude. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/fortitudetec/sprawl. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

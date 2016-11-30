@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'sprawl/cli'
+
+cli = Sprawl::Cli.new
+cli.run

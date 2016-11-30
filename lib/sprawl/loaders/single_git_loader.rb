@@ -1,8 +1,8 @@
 require 'fileutils'
-require 'servitude/service_definition'
-require 'servitude/loaders/directory_loader'
+require 'sprawl/service_definition'
+require 'sprawl/loaders/directory_loader'
 
-module Servitude
+module Sprawl
   class SingleGitLoader
     def self.load(options)
       puts 'Using Single Git Loader' if options[:verbose]
@@ -11,15 +11,15 @@ module Servitude
       service_definitions = []
       begin
         # Make temp directory
-        Dir.mkdir('.servitude')
+        Dir.mkdir('.sprawl')
 
         # Clone repo
-        `git clone #{options[:single]} .servitude`
+        `git clone #{options[:single]} .sprawl`
 
         # run Directory loader
-        service_definitions = Servitude::DirectoryLoader.load(directory: '.servitude', verbose: options[:verbose])
+        service_definitions = Sprawl::DirectoryLoader.load(directory: '.sprawl', verbose: options[:verbose])
       ensure
-        FileUtils.rm_rf('.servitude')
+        FileUtils.rm_rf('.sprawl')
       end
 
       service_definitions

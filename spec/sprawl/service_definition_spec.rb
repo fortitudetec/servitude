@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Servitude::ServiceDefinition do
+describe Sprawl::ServiceDefinition do
   it 'from generates a new definition from a hash' do
     hash = {
       'name' => 'Test Service',
@@ -12,7 +12,7 @@ describe Servitude::ServiceDefinition do
       'rest_dependencies' => ['That other service']
     }
 
-    definition = Servitude::ServiceDefinition.from(hash)
+    definition = Sprawl::ServiceDefinition.from(hash)
 
     expect(definition.name).to eq('Test Service')
     expect(definition.description).to eq('Does cool things')

@@ -1,3 +1,3 @@
-module Servitude
+module Sprawl
   VERSION = '0.1.0'.freeze
 end
