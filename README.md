@@ -29,7 +29,7 @@ Or install it yourself as:
 ```bash
 Usage: sprawl [options]
     -d, --directory=DIRECTORY        Locate definition files in given directory
-    -gREPOSITORIES,                  Locate definition files across many git repositories (SERVITUDE files)
+    -gREPOSITORIES,                  Locate definition files across many git repositories (SPRAWL files)
         --group-of-repositories
     -h, --help                       Prints this help
     -o, --output-type=OUTPUTTYPE     Format of output (SVG, PNG, Text, HTML)

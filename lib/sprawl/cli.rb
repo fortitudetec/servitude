@@ -28,7 +28,7 @@ module Sprawl
         opts.on('-g REPOSITORIES',
                 '--group-of-repositories=REPOSITORIES',
                 Array,
-                'Locate definition files across many git repositories (SERVITUDE files)') do |g|
+                'Locate definition files across many git repositories (SPRAWL files)') do |g|
           options[:group] = g
           options[:location_type] = :group
         end
