@@ -1,5 +1,7 @@
 # Sprawl
 
+**NOTE: This library is no longer maintained, please check out https://gitlab.com/fortitudetec/elucidation-project as this was built off of this initial work**
+
 One challenge in the microservice world is tracking service relationships as an application grows.  
 
 Enter Sprawl!
